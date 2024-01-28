@@ -1,0 +1,7 @@
+{
+  "name": "hidlink-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
