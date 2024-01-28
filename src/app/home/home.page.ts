@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BluetoothService } from '../bluetooth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private bluetoothService: BluetoothService) {}
 
+  async scan() {
+    await this.bluetoothService.scan();
+  }
+
+//   async stopScan() {
+//     await this.bluetoothService.stopBluetoothScan();
+//   }
 }
