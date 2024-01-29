@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { BluetoothService } from '../bluetooth.service';
+//import { BluetoothService } from '../bluetooth.service';
+import { NavController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-home',
@@ -8,13 +11,17 @@ import { BluetoothService } from '../bluetooth.service';
 })
 export class HomePage {
 
-  constructor(private bluetoothService: BluetoothService) {}
+  //constructor(private bluetoothService: BluetoothService) {}
+  constructor(private navCtrl: NavController) {}
 
-  async scan() {
-    await this.bluetoothService.scan();
-  }
+//   async start() {
+//     this.bluetoothService.scanStart();
+//   }
+    start() {
+        this.navCtrl.navigateForward('/hidlink-connect');
+    }
 
-//   async stopScan() {
-//     await this.bluetoothService.stopBluetoothScan();
+//   async scanStop() {
+//     await this.bluetoothService.scanStop();
 //   }
 }

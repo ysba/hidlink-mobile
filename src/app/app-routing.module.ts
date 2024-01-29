@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'hidlink-connect',
+    loadChildren: () => import('./hidlink-connect/hidlink-connect.module').then( m => m.HidlinkConnectPageModule)
+  },
 ];
 
 @NgModule({

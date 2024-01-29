@@ -1,23 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
+<ion-header class="header-image-container">
+    <ion-img
+      src="assets/images/hidlink-high-resolution-logo-white-transparent.png"
+      alt="hidlink"
+      class="top-logo"
+    ></ion-img>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-  
-  <ion-button (click)="scan()">Scan hidlink devices</ion-button>
-
+<ion-content [fullscreen]="true">
+    <div id="container">
+        <p>This is an open-source project.</p>
+        <p>Checkout the <a target="_blank" rel="noopener noreferrer" href="https://github.com/ysba/hidlink">Github repository</a>.</p>
+        <p>To start and connect to a nearby <i>hidlink</i> device, <br> click on the button below:</p>
+        <ion-button color="dark" size="large" (click)="start()">Start</ion-button>    
+    </div>
 </ion-content>
